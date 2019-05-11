@@ -492,7 +492,7 @@ cron() {
 		gfwlist)
 			loger 6 "Updating gfwlist from $gfwlist_update_url..."
 			gfwlist_conf="/etc/dnsmasq.ssr/gfw_list.conf"
-			if curl --connect-timeout 3 -sLo /tmp/gfw.b64 $gfwlist_update_url && /usr/bin/ssr-gfw; then
+			if wget-ssl --no-check-certificate $gfwlist_update_url -O /tmp/gfw.b64 && /usr/bin/ssr-gfw; then
 				update_conf /tmp/gfwnew.txt $gfwlist_conf && /etc/init.d/dnsmasq restart
 				loger 6 "gfwlist update success! [$gfwlist_conf: $(cat $gfwlist_conf | wc -l) lines]"
 			else
@@ -504,7 +504,7 @@ cron() {
 		china_ip)
 			loger 6 "Updating china ip from $china_ip_update_url..."
 			china_ip_conf="/etc/china_ssr.txt"
-			if curl --connect-timeout 3 -sLo- $china_ip_update_url 2>/dev/null \
+			if wget -O- -t 3 -T 3 $china_ip_update_url 2>/dev/null \
 				| awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' \
 				> /tmp/china_ssr.txt; then
 				update_conf /tmp/china_ssr.txt $china_ip_conf
