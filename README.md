@@ -20,14 +20,17 @@ Then run:
 scripts/feeds update -f gocloud
 scripts/feeds install -a -p gocloud
 ```
-
+Find libcurl choose openssl
 Now, you will be able to see all the packages in this repository via `make menuconfig`.
+
 
 ```
 ./scripts/feeds update -a 
 ./scripts/feeds install -a
 make menuconfig 
+```
 
+```
 Make clean
 make -j1 V=s
 make package/feeds/gocloud/luci-app-shadowsocksr/compile V=s
