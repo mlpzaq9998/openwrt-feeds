@@ -20,7 +20,7 @@ Then run:
 scripts/feeds update -f gocloud
 scripts/feeds install -a -p gocloud
 ```
-Find libcurl choose openssl
+libraries - ibcur  l choose openssl
 
 Now, you will be able to see all the packages in this repository via `make menuconfig`.
 
@@ -36,3 +36,14 @@ Make clean
 make -j1 V=s
 make package/feeds/gocloud/luci-app-shadowsocksr/compile V=s
 ```
+
+
+
+bash：po2lmo:command not found 
+```
+cd luci-app-udp2raw/tools/po2lmo
+make
+sudo make install
+```
+https://github.com/sensec/luci-app-udp2raw/wiki/%E7%BC%96%E8%AF%91%E6%95%99%E7%A8%8B
+
