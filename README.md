@@ -7,7 +7,7 @@ wget http://archive.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/OpenWrt-SDK
 
 tar xjf OpenWrt-SDK-ramips-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
 sudo apt-get update
-sudo apt-get install ccache xsltproc gperf gawk libncurses5-dev libz-dev zlib1g-dev  git ccache
+sudo apt-get install ccache xsltproc gperf gawk libncurses5-dev libz-dev zlib1g-dev  git ccache make make-guile
 ```
 Add the following line to the `feeds.conf.default` file of your [OpenWrt SDK](http://archive.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/) workspace:
 
