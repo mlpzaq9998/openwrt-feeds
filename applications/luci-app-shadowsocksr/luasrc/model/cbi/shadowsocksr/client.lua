@@ -157,10 +157,6 @@ function o.cfgvalue(...)
     return Value.cfgvalue(...) == "1" and translate("Enable") or translate("Disable")
 end
 
-o = s:option(DummyValue, "weight", translate("Weight"))
-function o.cfgvalue(...)
-    return Value.cfgvalue(...) or "10"
-end
 
 -- [[ Global Setting ]]--
 s = m:section(TypedSection, "global")
