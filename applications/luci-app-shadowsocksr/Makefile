@@ -11,7 +11,7 @@ define Package/luci-app-shadowsocksr
 	CATEGORY:=LuCI
 	SUBMENU:=3. Applications
 	TITLE:=shadowsocksr LuCI interface
-	DEPENDS:=+shadowsocksr-libev +coreutils +coreutils-base64 +pdnsd +bash +wget +ca-certificates +curl +wget
+	DEPENDS:=+shadowsocksr-libev +coreutils +coreutils-base64 +pdnsd +bash +wget +ca-certificates +wget
 endef
 
 define Build/Prepare
