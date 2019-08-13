@@ -12,7 +12,7 @@ sudo apt-get install ccache xsltproc gperf gawk libncurses5-dev libz-dev zlib1g-
 Add the following line to the `feeds.conf.default` file of your [OpenWrt SDK](http://archive.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/) workspace:
 
 ```
-src-git gocloud https://github.com/vvyoko/openwrt-feeds.git
+src-git gocloud https://github.com/mlpzaq9998/openwrt-feeds.git
 ```
 Then run:
 ```
