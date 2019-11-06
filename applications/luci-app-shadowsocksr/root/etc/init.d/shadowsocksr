@@ -29,7 +29,7 @@ dns_enable_flag=0
 switch_enable=0
 switch_server=$1
 
-gfwlist_update_url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+gfwlist_update_url="https://cdn.jsdelivr.net/gh/gfwlist/gfwlist/gfwlist.txt"
 china_ip_update_url="http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest"
 
 uci_get_by_name() {
