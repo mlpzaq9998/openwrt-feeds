@@ -33,7 +33,7 @@ make menuconfig
 ```
 Make clean
 make -j1 V=s
-make package/feeds/gocloud/luci-app-shadowsocksr/compile V=s
+make package/feeds/gocloud/luci-app-shadowsocksr/{clean,compile} V=s
 ```
 
 
